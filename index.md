@@ -1,0 +1,46 @@
+---
+title       : Motor Trend Car Road Tests - Effects of Automatic and Manual Transmission on MPG
+subtitle    : Coursera - Regression Models Course Project (August 2014)
+author      : Coursera Student
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Executive Summary - "mtcars" Data Analysis
+
+Motor Trend, an automobile trend magazine is interested in exploring the relationship between a set of variables and miles per gallon (MPG) outcome. In this project, we will analyze the mtcars dataset from the 1974 Motor Trend US magazine to answer the following questions:
+
+-Is an automatic or manual transmission better for miles per gallon (MPG)?
+
+-How different is the MPG between automatic and manual transmissions?
+
+Using simple linear regression analysis, we determine that there is a signficant difference between the mean MPG for automatic and manual transmission cars. Manual transmissions achieve a higher value of MPG compared to automatic transmission. This increase is approximately 1.8 MPG when switching from an automatic transmission to a manual one, with all else held constant. 
+
+--- 
+
+## Exploratory Analysis
+First, we plot the relationship between all the variables of the mtcars dataset. We learned from this plot that the variables cyl, disp, hp, drat, wt, vs and am have a strong correlation with mpg. 
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+
+---
+
+## Exploratory Analysis
+In the second plot, we look at the distribution of mpg for each Automatic or Manual by plotting box plot. This plot clearly depicts that manual transmissions tend to have higher MPG. 
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+
+---
+
+## Conclusions
+This data is further analyzed and discussed in regression analysis section (Regression Analysis Course Project) by fitting a linear model. In this course project, we build linear regression models using different variables in order to find the best fit and compare it with the base model which we have using anova. After model selection, we also perform analysis of residuals.
+
+Based on the analysis done in this project, we can conclude that:
+- Cars with Manual transmission get 1.8 more miles per gallon compared to cars with Automatic transmission. (1.8 adjusted for hp, cyl, and wt).
+- mpg will decrease by 2.5 for every 1000 lb increase in wt.
+- mpg decreases negligibly (only 0.32) with every increase of 10 in hp.
+- If number of cylinders, cyl increases from 4 to 6 and 8, mpg will decrease by a factor of 3 and 2.2 respectively (adjusted by hp, wt, and am). 
+
